@@ -1,0 +1,145 @@
+[
+    {
+        "handle": "cheyun",
+        "maxRating": 1834,
+        "rating": 1746,
+        "registrationTimeSeconds": 1716212477,
+        "SolvedCount": 55,
+        "RatingDistribution": {
+            "1600": 4,
+            "1200": 5,
+            "900": 3,
+            "800": 10,
+            "2100": 1,
+            "1000": 4,
+            "1700": 3,
+            "1900": 2,
+            "1400": 3,
+            "1100": 2,
+            "1500": 1,
+            "1800": 2,
+            "2000": 2
+        }
+    },
+    {
+        "handle": "Adel_Tamer",
+        "maxRating": 919,
+        "rating": 881,
+        "registrationTimeSeconds": 1672813689,
+        "SolvedCount": 476,
+        "RatingDistribution": {
+            "1000": 42,
+            "1200": 17,
+            "1600": 3,
+            "1400": 11,
+            "800": 277,
+            "900": 42,
+            "1100": 18,
+            "1300": 9,
+            "1500": 3,
+            "1700": 1,
+            "1800": 1
+        }
+    },
+    {
+        "handle": "weewoo14",
+        "maxRating": 1057,
+        "rating": 1057,
+        "registrationTimeSeconds": 1707055940,
+        "SolvedCount": 19,
+        "RatingDistribution": {
+            "900": 1,
+            "1000": 2,
+            "800": 12,
+            "1100": 1
+        }
+    },
+    {
+        "handle": "Romsonn",
+        "maxRating": 1331,
+        "rating": 1283,
+        "registrationTimeSeconds": 1709643346,
+        "SolvedCount": 43,
+        "RatingDistribution": {
+            "1300": 6,
+            "1200": 6,
+            "1100": 7,
+            "800": 15,
+            "900": 4,
+            "1000": 3,
+            "1600": 1,
+            "1400": 1
+        }
+    },
+    {
+        "handle": "Sat_Njk",
+        "maxRating": 1216,
+        "rating": 1117,
+        "registrationTimeSeconds": 1722950640,
+        "SolvedCount": 25,
+        "RatingDistribution": {
+            "1500": 1,
+            "1400": 1,
+            "1000": 5,
+            "800": 12,
+            "900": 1,
+            "1100": 3,
+            "1200": 2
+        }
+    },
+    {
+        "handle": "idontknow2022",
+        "maxRating": 1558,
+        "rating": 1558,
+        "registrationTimeSeconds": 1707466079,
+        "SolvedCount": 40,
+        "RatingDistribution": {
+            "1500": 2,
+            "1600": 1,
+            "1200": 2,
+            "900": 1,
+            "800": 10,
+            "1900": 1,
+            "1700": 1,
+            "1300": 3,
+            "1100": 3,
+            "1000": 1
+        }
+    },
+    {
+        "handle": "MommyMikasa",
+        "maxRating": 1188,
+        "rating": 953,
+        "registrationTimeSeconds": 1709894981,
+        "SolvedCount": 57,
+        "RatingDistribution": {
+            "800": 35,
+            "1100": 1,
+            "1200": 7,
+            "1000": 3,
+            "1400": 3,
+            "900": 4,
+            "1300": 3,
+            "1600": 1
+        }
+    },
+    {
+        "handle": "Boy_Ja_Va",
+        "maxRating": 1401,
+        "rating": 1401,
+        "registrationTimeSeconds": 1681493146,
+        "SolvedCount": 213,
+        "RatingDistribution": {
+            "1000": 18,
+            "800": 92,
+            "1300": 14,
+            "1200": 20,
+            "900": 18,
+            "1700": 3,
+            "1400": 11,
+            "1600": 7,
+            "1100": 23,
+            "1500": 5
+        }
+    }
+]
