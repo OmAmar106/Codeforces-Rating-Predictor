@@ -1,5 +1,4 @@
 from flask import Flask, redirect, render_template, request, jsonify,url_for,session
-import matplotlib.pyplot as plt
 from flask_caching import Cache
 from Model.predict import func
 

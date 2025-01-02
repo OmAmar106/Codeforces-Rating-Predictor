@@ -1,3 +1,4 @@
 requests
-scikit-learn
 numpy
+flask
+flask_caching
