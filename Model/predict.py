@@ -3,9 +3,10 @@ import numpy as np
 import requests
 from collections import Counter
 
-model = joblib.load('regression_model.pkl')
-while True:
-    handle = input("Enter Username : ")
+model = joblib.load('Model/regression_model.pkl')
+
+def func(handle):
+    # handle = input("Enter Username : ")
 
     def func(d):
         k = 0
@@ -31,8 +32,7 @@ while True:
                 if 'rating' in i['problem']:
                     count2[i['problem']['rating']] += 1
     else:
-        print("server down :/")
-        exit()
+        return (False,0)
 
     url = "https://codeforces.com/api/user.info?handles="+handle
 
@@ -45,9 +45,8 @@ while True:
             L = func(count2)
             x_test = np.array([[L[0],(data['registrationTimeSeconds']),L[1]]])
             y_pred = model.predict(x_test)
-            print(f"Predicted Rating = {y_pred[0]}, Actual Rating = {data['rating']}")
+            return (True,[y_pred[0],data])
         except:
-            print("User does not exists")
-        
+            return (False,'User does not exist')
     else:
-        print("CF Server is Down :/ ")
+        return (False,'Server Down')

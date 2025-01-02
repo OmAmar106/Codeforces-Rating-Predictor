@@ -1,0 +1,118 @@
+/* Body with improved neon gradient */
+body {
+    margin: -7%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2b2b2b, #3a3a3a, #4e4e4e, #0e0e0e, #1c1c1c);
+    background-size: 400% 400%;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    animation: neonGradient 7s ease infinite;
+}
+
+/* Updated gradient animation */
+@keyframes neonGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Centered container styles */
+.centered-container {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin: 0%;
+    animation: fadeIn 2s ease-in-out;
+    z-index: 10;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 250px;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+/* Input field styles */
+input[type="text"] {
+    width: 80%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1.2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    transition: opacity 0.3s ease;
+}
+
+input[type="text"]:focus::placeholder {
+    opacity: 0; /* Hides placeholder */
+}
+
+input[type="text"]:focus {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styles */
+.footer {
+    position: fixed; /* Changed from absolute to fixed */
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffdd57;
+}
+
+.footer i {
+    font-size: 1.5rem;
+}
+
+.search-button {
+    margin-left: 10px;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.search-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.search-button:active {
+    background: rgba(255, 255, 255, 0.4);
+}

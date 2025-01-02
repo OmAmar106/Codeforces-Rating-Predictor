@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codeforces Rating Predictor</title>
+    <link rel="stylesheet" href="static/css/result.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="centered-container">
+        <h1>Codeforces Rating Predictor</h1>
+        <br>
+        <div class="profile-details">
+            <div class="profile-photo-container">
+                <img src="{{ user_data.avatar }}" alt="Profile Image" class="profile-photo">
+            </div>
+            <div class="user-info">
+                {% if user_data.rank_color == "#FF0000" %}
+                    <h2 class="user-handle">
+                        <span style="color: black; display: inline-block; margin: 0;">{{ user_data.handle[0] }}</span><span style="color: red; display: inline-block; margin: 0;">{{ user_data.handle[1:] }}</span>
+                    </h2>
+                {% else %}
+                    <h2 class="user-handle" style="color: {{ user_data.rank_color }}">
+                        {{ user_data.handle }}
+                    </h2>
+                {% endif %}
+                <p><strong>Rating:</strong> {{ user_data.rating }}</p><br>
+                <p><strong>Max Rating:</strong> {{ user_data.maxRating }}</p><br>
+                <p><strong>Rank:</strong> {{ user_data.rank }}</p><br>
+                <p><strong>Country:</strong> {{ user_data.country if user_data.country else 'Not provided' }}</p><br>
+                <p><strong>Organization:</strong> {{ user_data.organization if user_data.organization else 'Not provided' }}</p><br>
+                <br><br>
+            </div>
+        </div>
+        <br>
+        <div class="extra-buttons">
+            <div class="button-wrapper">
+                <p>Expected Rating</p>
+                <button>{{ prediction | round(2) }}</button>
+            </div>
+            <div class="button-wrapper">
+                <p>Actual Rating</p>
+                <button>{{ user_data.rating }}</button>
+            </div>
+            <div class="button-wrapper">
+                <p>Error</p>
+                <button>{{ (((((user_data.rating - prediction) if (user_data.rating - prediction) >= 0 else -(user_data.rating - prediction)) / user_data.rating))*100) | round(2) }}%</button>
+            </div>
+        </div>
+        <br>
+        <div class="message">
+            <p>{{msg}}</p>
+        </div>
+        <br><br>
+    </div>
+    
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://github.com/OmAmar106/Codeforces-Rating-Predictor" target="_blank">
+                <i class="fab fa-github">&nbsp;&nbsp;</i>
+            </a>
+            <a href="https://www.linkedin.com/in/om-amar/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
