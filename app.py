@@ -30,12 +30,19 @@ def index():
         "Legendary Grandmaster": "#FF0000",  # Red
         "Tourist": "#FFFFFF"
     }
-
-    tup[1][1]['rank_color'] = d[(tup[1][1]['rank']).title()]
-    if tup[1][0]>tup[1][1]['rating']:
+    try:
+        tup[1][1]['rank_color'] = d[(tup[1][1]['rank']).title()]
+    except:
+        tup[1][1]['rank_color'] = '#A9A9A9'
+    try:
+        if tup[1][0]>tup[1][1]['rating']:
+            msg = "Hopefully, you wil reach your expected rating soon :)"
+        else:
+            msg = "You are above your Expected Rating, Bravo!!!"
+    except:
         msg = "Hopefully, you wil reach your expected rating soon :)"
-    else:
-        msg = "You are above your Expected Rating, Bravo!!!"
+    if 'rating' not in tup[1][1]:
+        tup[1][1]['rating'] = 0
     return render_template('result.html',user_data=tup[1][1],prediction=tup[1][0],msg=msg)
 
 @app.template_filter('abs')
