@@ -54,8 +54,8 @@ mse = mean_squared_error(y_test, y_pred)
 
 print(f"Mean Squared Error: {mse}")
 
-plt.scatter(y_pred, y_test, color='blue', label='Actual')
-# plt.plot(y_test, y_pred, color='red', label='Predicted')
+plt.scatter(y_pred, y_test, color='blue', label='Predicted')
+plt.plot([0, 1, 3000], [0, 1, 3000], color='red', label='Actual')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
