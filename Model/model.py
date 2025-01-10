@@ -7,37 +7,28 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import joblib
 
-
+rating_list = ['800', '900', '1000', '1100', '1200', '1300', '1400', '1500', '1600', '1700', '1800', '1900', '2100', '2200', '2400', '2500']
 with open('data.json', 'r') as file:
     data = json.load(file)
 
 ratings = []
 solve = []
 
-def func(d):
-    k = 0
-    k1 = 0
-    for i in d:
-        k += d[i]*int(i)
-        k1 += d[i]
-    try:
-        return k/k1
-    except:
-        return 0
-
-def func2(d):
-    k = 0
-    k1 = 0
-    for i in d:
-        k += d[i]*int(i)
-        k1 += d[i]
-    return k1
+def func(user):
+    X = []
+    for i in rating_list:
+        if i in user['RatingDistribution']:
+            X.append(user['RatingDistribution'][i])
+        else:
+            X.append(0)
+    return X
+    
 
 for user in data:
     if user['SolvedCount']<100:
         continue
     ratings.append(user['rating'])
-    solve.append([func(user['RatingDistribution']),user['registrationTimeSeconds'],func2(user['RatingDistribution'])])
+    solve.append(func(user))
 
 x = np.array(solve)
 
