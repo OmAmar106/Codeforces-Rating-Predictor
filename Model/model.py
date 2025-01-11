@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import joblib
 
-rating_list = ['800', '900', '1000', '1100', '1200', '1300', '1400', '1500', '1600', '1700', '1800', '1900', '2100', '2200', '2400', '2500']
+rating_list = ['1200', '1300', '1400', '1500',    '1600', '1700', '1800', '1900', '2000' , '2100', '2200', '2300', '2400', '2500', '2600', '2700', '2800', '2900', '3000']
 with open('data.json', 'r') as file:
     data = json.load(file)
 
@@ -16,11 +16,47 @@ solve = []
 
 def func(user):
     X = []
-    for i in rating_list:
+    sum = 0
+    for i in rating_list[:4]:
         if i in user['RatingDistribution']:
-            X.append(user['RatingDistribution'][i])
-        else:
-            X.append(0)
+            sum += user['RatingDistribution'][i]
+    X.append(sum)
+    sum = 0
+    for i in rating_list[4:7]:
+        if i in user['RatingDistribution']:
+            sum += user['RatingDistribution'][i]
+    X.append(sum)
+    sum = 0
+    for i in rating_list[7:9]:
+        if i in user['RatingDistribution']:
+            sum += user['RatingDistribution'][i]
+    X.append(sum)
+    sum = 0
+    for i in rating_list[9:11]:
+        if i in user['RatingDistribution']:
+            sum += user['RatingDistribution'][i]
+    X.append(sum)
+    sum = 0
+    for i in rating_list[11:13]:
+        if i in user['RatingDistribution']:
+            sum += user['RatingDistribution'][i]
+    X.append(sum)
+    sum = 0
+    for i in rating_list[13:15]:
+        if i in user['RatingDistribution']:
+            sum += user['RatingDistribution'][i]
+    X.append(sum)
+    sum = 0
+    for i in rating_list[15:17]:
+        if i in user['RatingDistribution']:
+            sum += user['RatingDistribution'][i]
+    X.append(sum)
+    sum = 0
+    for i in rating_list[17:19]:
+        if i in user['RatingDistribution']:
+            sum += user['RatingDistribution'][i]
+    X.append(sum)
+    sum = 0
     return X
     
 
