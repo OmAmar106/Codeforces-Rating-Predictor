@@ -37,3 +37,7 @@ https://codeforces-rating-predictor-two.vercel.app/
 
 ![image](https://github.com/user-attachments/assets/7bdcbba9-d188-43a3-93a7-9f0f957cc694)
 
+## Extension Version
+
+https://github.com/OmAmar106/Codeforces-Rating-Predictor-Extension
+
