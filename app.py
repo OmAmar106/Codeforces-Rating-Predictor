@@ -54,7 +54,7 @@ def get(s):
     elem = s
     tup = (func(elem))
     if not tup[0]:
-        return {'':''}
+        return jsonify({'':''}),404
 
     d = {
         "Newbie": "#A9A9A9",  # Gray
@@ -82,7 +82,7 @@ def get(s):
         msg = "Hopefully, you wil reach your expected rating soon :)"
     if 'rating' not in tup[1][1]:
         tup[1][1]['rating'] = 0
-    return {'user_data':tup[1][1],'prediction':tup[1][0]}
+    return jsonify({'user_data':tup[1][1],'prediction':tup[1][0]}),200
 
 if __name__ == '__main__':
     app.run(debug=True)
