@@ -2,3 +2,4 @@ requests
 numpy
 flask
 flask_caching
+flask_cors

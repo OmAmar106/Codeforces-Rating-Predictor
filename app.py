@@ -1,8 +1,10 @@
 from flask import Flask, redirect, render_template, request, jsonify,url_for,session
 from flask_caching import Cache
+from flask_cors import CORS
 from Model.predict import func
 
 app = Flask(__name__)
+CORS(app)
 app.config['CACHE_TYPE'] = 'simple'
 cache = Cache(app)
 app.app_context().push()
